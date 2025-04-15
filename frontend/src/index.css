@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gufu: #f1b75e;
+  --color-gufu-100: #f3c175;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.input-style {
+  @apply w-full mt-1 px-4 py-2 border border-gray-300 text-black bg-blue-50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[var(--color-gufu)];
+}
+
+/* Base Button Style */
+.btn-style {
+  @apply w-full py-3 text-white rounded-2xl transition-all;
+}
+
+/* Primary Button (Gufu Yellow) */
+.btn-primary {
+  background-color: var(--color-gufu);
+}
+.btn-primary:hover {
+  background-color: var(--color-gufu-hover);
+}
+
+/* Google Button */
+.btn-google {
+  @apply bg-red-600 hover:bg-red-700 flex items-center justify-center space-x-4;
+}
